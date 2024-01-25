@@ -12,7 +12,7 @@
         
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 
@@ -32,7 +32,7 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Apartment Management System</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Effortless Living, Seamless Management: Your Apartment, Our Expertise.</h2>
-                        <a class="btn btn-primary" href="{{ route('register') }}">Sign Up </a>
+                        <a class="btn btn-primary" href="{{ route('register') }}">Register </a>
                         <a class="btn btn-primary" href="{{ route('login') }}">Log In</a>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource("/unit", UnitController::class);
 Route::resource("/tenant", TenantController::class);
 Route::resource("/payment", PaymentController::class);
+Route::resource("/role", RoleController::class); 
