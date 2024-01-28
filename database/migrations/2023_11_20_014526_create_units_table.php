@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->double('monthly_rent');
-            $table->double('unit_no');
-            $table->double('floor_no');
+            $table->double('monthly_rent')->nullable();
+            $table->double('unit_no')->nullable();
+            $table->double('floor_no')->nullable();
+            $table->double('unit_1');
             $table->timestamps();
         });
     }

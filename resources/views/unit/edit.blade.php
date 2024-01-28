@@ -5,9 +5,14 @@
   <div class="card-header">Units Page</div>
   <div class="card-body">
       
-      <form action="{{ url('unit/' .$unit->id) }}" method="post">
+      <form action="{{ url('unit/' .$unit->id)  }}" enctype="multipart/form-data"  method="post">
         {!! csrf_field() !!}
         @method("PATCH")
+       
+            <strong>Choose Photo</strong>
+            <br>
+            <input type="file" name="unit_1" class="form-control-file">    
+                
         <input type="hidden" name="id" id="id" value="{{$unit->id}}" id="id" />
         <label>Monthly Rent</label></br>
         <input type="text" name="monthly_rent" id="monthly_rent" value="{{$unit->monthly_rent}}" class="form-control"></br>

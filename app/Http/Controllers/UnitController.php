@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Unit;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class UnitController extends Controller
@@ -41,6 +42,25 @@ class UnitController extends Controller
     {
         $unit = Unit::find($id);
         $input = $request->all();
+
+        if ($request->hasFile('unit_1')) {
+            // Delete the previous avatar if it exists
+            if ($unit->unit_1) {
+                Storage::disk('public')->delete($unit->unit_1);
+            }
+    
+            $avatar = $request->file('unit_1');
+            // dd($avatar);
+            $avatarPath = $avatar->store('units', 'public'); // Store the file in the 'avatars' directory within the 'public' disk
+            $input['unit_1'] = $avatarPath;
+    
+        } else {
+            // No file provided, set avatar to null
+            $input['unit_1'] = null;
+        }
+        // dd($data);
+        // dd($Admin);
+       
         $unit->update($input);
         return redirect('unit')->with('flash_message', 'unit Updated!');  
     }

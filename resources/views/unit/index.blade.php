@@ -11,7 +11,14 @@
                     
                         <div class="row">
                             <div class="column">
-
+                                <h4>Unit No. 001</h4>
+                                @if(auth()->unit()->unit_1)
+                                <img src="{{ asset('storage/' . Auth::units()->unit_1)}}" alt="This is a picture of room 1." style="width:700px;">
+                                @else
+                                <img src="" alt="This is a picture of room 1." style="width:700px;">
+                                <p><b>P10,000.00 Monthly Rent</b></p>
+                                @endif
+{{-- 
             
                                 <h4>Unit No. 001</h4>
                                 <img src="unitsss/image/rm1.jpg" alt="This is a picture of room 1." style="width:700px;">
@@ -27,7 +34,7 @@
                                 <img src="unitsss/image/rm3.jpg" alt="This is a picture of room 3." style="width:700px;">
                                 <p><b>P15,000.00 Monthly Rent</b></p>
 
-                                
+                                 --}}
             
                     <style>
                         .column{
