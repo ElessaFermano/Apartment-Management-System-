@@ -16,7 +16,7 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
          
             <center>    <a class="navbar-brand ps-3" href="index.html">Apartment Management System</a></center>
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::User()->name}}</span>
+           
            
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             
@@ -28,7 +28,10 @@
                 
                 <li class="nav-item dropdown">
                     
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="text-white">
+                        {{ Auth::User()->name}}
+                     
+                    </span><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a href=""></a>
                       
@@ -77,6 +80,8 @@
                                 Payment History
                             </a>
                            @endif
+
+                           
                            
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="dashboard/js/scripts.js"></script>
@@ -87,3 +92,5 @@
         <script src="dashboard/js/datatables-simple-demo.js"></script>
     </body>
 </html>
+
+
