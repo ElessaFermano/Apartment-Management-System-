@@ -16,7 +16,7 @@ return new class extends Migration
             $table->double('monthly_rent')->nullable();
             $table->double('unit_no')->nullable();
             $table->double('floor_no')->nullable();
-            $table->double('unit_1');
+            $table->string('unit_1');
             $table->timestamps();
         });
     }

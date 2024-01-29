@@ -61,7 +61,7 @@ class UnitController extends Controller
         // dd($data);
         // dd($Admin);
        
-        $unit->update($input);
+        $unit->save($input);
         return redirect('unit')->with('flash_message', 'unit Updated!');  
     }
     
