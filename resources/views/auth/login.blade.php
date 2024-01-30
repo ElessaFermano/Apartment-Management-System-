@@ -15,31 +15,7 @@
 <body>
    
 
-    <!-- <div class="container">
-      <div class="wrapper">
-        <div class="title"><span>Login Form</span></div>
 
-        <form method="POST" action="{{ route('login') }}">
-         
-          <div class="row">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email or Phone" required>
-          </div>
-          <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
-          </div>
-          
-          <div class="row button"  >
-            <input type="submit"  value="Login">
-
-            
-          </div>
-          <div class="signup-link">Don't have an account? <a href="register.blade.html">Register now!</a></div>
-        </form>
-      </div>
-    </div>
- -->
 
 < <div class="container">
     <div class="wrapper">
@@ -51,7 +27,7 @@
 
                         <div class="row">
                             
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label> 
                             <i class="fas fa-user"></i>
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>

@@ -10,13 +10,13 @@
         
         <header class="masthead">
 
-        <div class="nb" id="nr">
+        {{-- <div class="nb" id="nr">
                     <ul class="n">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                     </ul>
-                </div>
+                </div> --}}
 
                     <center>
                     <div class="text-center">

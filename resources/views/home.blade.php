@@ -21,26 +21,37 @@
          
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
+                          </div>
             </form>
          
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="text-white">
-                        {{ Auth::User()->name}}                     
-                    </span><i class="fas fa-user fa-fw"></i></a>
+                        {{ Auth::User()->name}}                         
+                    </span>
+                    {{-- <i class="fas fa-user fa-fw"></i> --}}
+                    <img class="img-profile rounded-circle" 
+                    style="width: 30px; height: 30px; object-fit: cover;"
+                    src="{{ Auth::user()->avatar ? asset('storage/' . Auth::user()->avatar) : asset('dashboard/assets/img/undraw_profile.svg') }}" 
+                    alt="Profile Image">
+               
+                </a>       
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#profileModal">
+                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile</a>  </li>
                         
+       
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a></li>
-                 
+                                    <li>
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                            <i class="fas fa-sign-out"></i> Logout
+                                        </a>
+                                    </li>
+                                    
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
-                                    </form> 
+                                    </form>
+                                    
                     </ul>
                 </li>
             </ul>
@@ -53,10 +64,10 @@
                         <div class="nav">
                           
                             <div class="sb-sidenav-menu-heading"><b><p>{{Auth::user()->role}}</p><sup></sup></b></div>
-                            @if(auth()->user()->role == 'admin')
+                            
                             <a class="nav-link" href="http://127.0.0.1:8000/home">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Dashboard 
                             </a>
                             <div class="sb-sidenav-menu-heading">Customers Information</div>
                             
@@ -68,7 +79,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Payment History
                             </a>
-                            @endif 
+                            
 
                             <a class="nav-link" href="http://127.0.0.1:8000/unit">
                                 <div class="sb-nav-link-icon"><i class="fas fa-house"></i></div>
@@ -80,14 +91,15 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                    @if(auth()->user()->role == 'admin')
-                        <h1 class="mt-4">Dashboard</h1>
+                   
+                        <h1 class="mt-4">Dashboard</h1> 
+                        
                         <br>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     
-                                    <div class="card-body">Total Units <i class="fas fa-house"></i></div>
+                                    <div class="card-body">Total Units <i class="fas fa-house"></i>  </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         
                                         <a class="small text-white stretched-link" href="http://127.0.0.1:8000/unit">View Details</a>
@@ -106,7 +118,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Total Tenants <i class="fas fa-users"></i></div>
+                                    <div class="card-body">Total Tenants <i class="fas fa-users"></i> {{$tenant}}</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="http://127.0.0.1:8000/tenant">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -115,7 +127,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">System Users <i class="fas fa-users"></i> </div>
+                                    <div class="card-body">System Users <i class="fas fa-users"></i></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="http://127.0.0.1:8000/role">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -124,10 +136,8 @@
                             </div>
                         </div>
                         
-                        @endif 
-
-                        
-                        <div class="row">
+                
+                        {{-- <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
@@ -220,8 +230,10 @@
                             </div>
                         </div>
                     </div>
-                </main>
+                </main> --}}
+                @include('layouts.logoutmodal')
 
+                @include('layouts.profile.profilemodal')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="dashboard/js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>

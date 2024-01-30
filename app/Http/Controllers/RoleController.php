@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
 class RoleController extends Controller
@@ -22,9 +24,18 @@ class RoleController extends Controller
   
     public function store(Request $request): RedirectResponse
     {
-        $role = $request->all();
-        User::create($role);
-        return redirect('role')->with('flash_message', 'role Addedd!');
+        $request->validate([
+            'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:8',
+            
+        ]);
+
+        $input = $request->all();
+        User::create($input);
+
+        return redirect('role')->with('flash_message', 'Role successfully added!');
     }
     public function show(string $id): View
     {
@@ -38,15 +49,50 @@ class RoleController extends Controller
     }
     public function update(Request $request, string $id): RedirectResponse
     {
+    
+        $request->validate([
+            'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name' => 'required|string|max:255',
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('users')->ignore($id),
+            ],
+        ]);
+        
         $role = User::find($id);
-        $input = $request->all();
-        $role->update($input);
-        return redirect('role')->with('flash_message', 'role Updated!');  
+        
+        if ($request->hasFile('avatar')) {
+            $avatar = $request->file('avatar');
+            $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
+        
+            
+            $avatar->storeAs('avatars', $avatarName, 'public');
+        
+
+            if ($role->avatar) {
+                Storage::disk('public')->delete($role->avatar);
+            }
+        
+            $role->avatar = 'avatars/' . $avatarName;
+        }
+        
+        $role->name = $request->input('name');
+        $role->email = $request->input('email');
+        $role->save();
+        
+ 
+        return redirect('role')->with('flash_message', 'Role Updated successfully!');
+        
+    
+      
+        return redirect('role')->with('flash_message', 'Role Updated!');
     }
+
     
     public function destroy(string $id): RedirectResponse
     {
         User::destroy($id);
-        return redirect('role')->with('flash_message', 'role deleted!'); 
+        return redirect('role')->with('flash_message', 'Role deleted!'); 
     }
 }
