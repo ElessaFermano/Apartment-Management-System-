@@ -70,4 +70,6 @@ class UnitController extends Controller
         Unit::destroy($id);
         return redirect('unit')->with('flash_message', 'unit deleted!'); 
     }
+
+    
 }

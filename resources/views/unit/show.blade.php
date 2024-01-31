@@ -8,9 +8,9 @@
    
  
         <div class="card-body">
-        <h5 class="card-title">Monthly Rent : {{ $unit->monthly_rent }}</h5>
+        <!-- <h5 class="card-title">Monthly Rent : {{ $unit->monthly_rent }}</h5>
         <p class="card-text">Unit Number : {{ $unit->unit_no }}</p>
-        <p class="card-text">Floor Number : {{ $unit->floor_no }}</p>
+        <p class="card-text">Floor Number : {{ $unit->floor_no }}</p> -->
   </div>
        
     </hr>

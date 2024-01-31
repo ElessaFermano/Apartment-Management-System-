@@ -22,6 +22,7 @@
                                         <th>Amount of Payment</th>
                                         <th>Date of Payment</th>
                                         <th>Method of Payment</th>
+                                        <th>Received by:</th>
                                        
 
                                     </tr>
@@ -33,6 +34,8 @@
                                         <td>{{ $item->amount }}</td>
                                         <td>{{ $item->date_payment }}</td>
                                         <td>{{ $item->method }}</td>
+                                        <td>{{ $item->received }}</td>
+
                                         
  
                                         <td>

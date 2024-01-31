@@ -13,6 +13,8 @@
         <input type="text" name="date_payment" id="date_payment" class="form-control"></br>
         <label>Method of Payment</label></br>
         <input type="text" name="method" id="method" class="form-control"></br>
+        <label>Received by:</label></br>
+        <input type="text" name="received" id="received" class="form-control"></br>
 
         
         <input type="submit" value="Save" class="btn btn-success"></br>

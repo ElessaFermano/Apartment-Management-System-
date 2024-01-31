@@ -16,6 +16,7 @@ return new class extends Migration
             $table->float('amount');
             $table->string('date_payment');
             $table->string('method');
+            $table->string('received');
             $table->timestamps();
         });
     }

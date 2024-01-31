@@ -8,7 +8,7 @@
                     <div class="card-header">
                        <center><h1>List of Units</h1></center> 
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="column">
                             <h4>Unit No. 001</h4>
                             @php
@@ -21,25 +21,22 @@
                                 <p><b>P10,000.00 Monthly Rent</b></p>
                             @endif
                         </div>
-                    </div>
-                    
-{{-- 
-            
+                    </div> -->
+                                
                                 <h4>Unit No. 001</h4>
-                                <img src="unitsss/image/rm1.jpg" alt="This is a picture of room 1." style="width:700px;">
+                                <img src="unitsss/image/rm1.jpg" alt="This is a picture of room 1." style="width:500px;">
                                 <p><b>P10,000.00 Monthly Rent</b></p>
 
                                 
                                 <h4>Unit No. 002</h4>
-                                <img src="unitsss/image/rm2.jpg" alt="This is a picture of room 2." style="width:700px;">
+                                <img src="unitsss/image/rm2.jpg" alt="This is a picture of room 2." style="width:500px;">
                                 <p><b>P20,000.00 Monthly Rent</b></p>
 
                                 
                                 <h4>Unit No. 003</h4>
-                                <img src="unitsss/image/rm3.jpg" alt="This is a picture of room 3." style="width:700px;">
+                                <img src="unitsss/image/rm3.jpg" alt="This is a picture of room 3." style="width:500px;">
                                 <p><b>P15,000.00 Monthly Rent</b></p>
 
-                                 --}}
             
                     <style>
                         .column{

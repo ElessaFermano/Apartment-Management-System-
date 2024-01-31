@@ -12,6 +12,7 @@
         <p class="card-text">Amount of Payment: {{ $payment->amount }}</p>
         <p class="card-text">Date of Payment: {{ $payment->date_payment }}</p>
         <p class="card-text">Method of Payment: {{ $payment->method }}</p>
+        <p class="card-text">Received by: {{ $payment->received }}</p>
         
   </div>
        

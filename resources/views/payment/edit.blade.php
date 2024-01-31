@@ -15,6 +15,8 @@
         <input type="number" name="date_payment" id="date_payment" value="{{$payment->date_payment}}" class="form-control"></br>
         <label>Method of Payment</label></br>
         <input type="text" name="method" id="method" value="{{$payment->method}}" class="form-control"></br>
+        <label>Received by: </label></br>
+        <input type="text" name="received" id="received" value="{{$payment->received}}" class="form-control"></br>
         
 
         <input type="submit" value="Update" class="btn btn-success"></br>

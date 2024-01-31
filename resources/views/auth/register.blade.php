@@ -14,34 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
   </head>
   <body>
-<!--     
-    <div class="container">
-      <div class="wrapper">
-        <div class="title"><span>Create your account</span></div>
-        <form action="#">
-            <div class="row">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="First Name" required>
-              </div>
-              <div class="row">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Last Name" required>
-              </div>
-          <div class="row">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email or Phone" required>
-          </div>
-          <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
-          </div>       
-          <div class="row button" >
-            <input type="submit" value="Submit" >          
-          </div>
-          <div class="signup-link">Already have an account? <a href="login.html">Log in</a></div>
-        </form>
-      </div>
-    </div> -->
 
 
  <div class="container">
@@ -53,7 +25,7 @@
                         @csrf
                         <div class="row">
     <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
-    <i class="fas fa-user"></i>
+    
     <div class="col-md-6">
         <select id="role" class="form-control" name="role" required autofocus>
             <option  value="admin"{{ old('role') == 'admin' ? ' selected' : '' }}>Admin</option>

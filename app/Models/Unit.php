@@ -15,4 +15,6 @@ class Unit extends Model
         'unit_no', 'floor_no'
     ];
     use HasFactory;
+    
+
 }
