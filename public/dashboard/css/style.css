@@ -32,7 +32,7 @@ body{
  
 }
 .button:hover {
-  background-color: #04AA6D; /* Green */
+  background-color: #225542; /* Green */
   color: white;
 }
 
@@ -61,8 +61,11 @@ li a {
   padding: 20px 16px;
   text-decoration: none;
 }
-
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+.h:hover {
+  color: rgb(16, 86, 44); 
+  transition: color 0.3s ease;
+  
 }

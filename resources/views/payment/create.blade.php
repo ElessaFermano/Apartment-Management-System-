@@ -15,6 +15,8 @@
         <input type="text" name="method" id="method" class="form-control"></br>
         <label>Received by:</label></br>
         <input type="text" name="received" id="received" class="form-control"></br>
+        <label>Tenant ID</label></br>
+        <input type="text" name="tenant_id" id="tenant_id" class="form-control"></br>
 
         
         <input type="submit" value="Save" class="btn btn-success"></br>

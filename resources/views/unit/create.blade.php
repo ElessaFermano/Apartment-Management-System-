@@ -10,7 +10,7 @@
         <strong>Unit 1 Photo</strong>
             <br>
             <input type="file" name="unit_1" class="form-control-file">  <br> <br>
-        <button type="submit" class="btn btn-success"> Add Photo</button></br>
+        <button type="submit" class="btn btn-success"> Add Photo</button>
     </form>
    
   </div>

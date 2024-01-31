@@ -16,7 +16,8 @@ class Tenant extends Model
         'floor_no',
         'gender',
         'age',
-        'phone_no'
+        'phone_no',
+        'unit_id'
 
     ];
     use HasFactory;

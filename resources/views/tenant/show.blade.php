@@ -14,6 +14,7 @@
         <p class="card-text">Gender : {{ $tenant->gender }}</p>
         <p class="card-text">Age : {{ $tenant->age }}</p>
         <p class="card-text">Phone Number : {{ $tenant->phone_no }}</p>
+        <p class="card-text">Unit ID : {{ $tenant->unit_id }}</p>
   </div>
        
     </hr>

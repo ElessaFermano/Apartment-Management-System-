@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('gender');
             $table->double('age');
             $table->double('phone_no');
+            $table->double('unit_id');
             
             $table->timestamps();
         });

@@ -13,7 +13,7 @@
         <p class="card-text">Date of Payment: {{ $payment->date_payment }}</p>
         <p class="card-text">Method of Payment: {{ $payment->method }}</p>
         <p class="card-text">Received by: {{ $payment->received }}</p>
-        
+        <p class="card-text">Tenant ID {{ $payment->tenant_id }}</p>
   </div>
        
     </hr>

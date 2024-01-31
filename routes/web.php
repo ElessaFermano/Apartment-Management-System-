@@ -5,6 +5,8 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReservationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,4 @@ Route::resource("/unit", UnitController::class);
 Route::resource("/tenant", TenantController::class);
 Route::resource("/payment", PaymentController::class);
 Route::resource("/role", RoleController::class); 
+

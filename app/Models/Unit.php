@@ -11,8 +11,7 @@ class Unit extends Model
     protected $table = 'units';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'monthly_rent', 
-        'unit_no', 'floor_no'
+        'unit_no'
     ];
     use HasFactory;
     

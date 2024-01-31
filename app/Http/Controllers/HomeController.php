@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tenant;
+use App\Models\Unit;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class HomeController extends Controller
 
         $tenant = Tenant::count();
         $Total_users = User::count();
+       
         return view('home', compact('tenant', 'Total_users'));
     }
 }

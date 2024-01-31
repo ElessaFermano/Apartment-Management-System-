@@ -24,6 +24,7 @@
                                         <th>Gender</th>
                                         <th>Age</th>
                                         <th>Phone Number</th>
+                                        <th>Unit ID</th>
 
                                     </tr>
                                 </thead>
@@ -36,6 +37,7 @@
                                         <td>{{ $item->gender }}</td>
                                         <td>{{ $item->age }}</td>
                                         <td>{{ $item->phone_no }}</td>
+                                        <td>{{ $item->unit_id }}</td>
  
                                         <td>
                                             <a href="{{ url('/tenant/' . $item->id) }}" title="View Tenant"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

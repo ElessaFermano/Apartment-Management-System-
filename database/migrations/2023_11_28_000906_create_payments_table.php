@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('date_payment');
             $table->string('method');
             $table->string('received');
+            $table->string('tenant_id');
             $table->timestamps();
         });
     }

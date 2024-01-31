@@ -19,6 +19,8 @@
         <input type="text" name="age" id="age" value="{{$tenant->age}}" class="form-control"></br>
         <label>Phone Number</label></br>
         <input type="text" name="phone_no" id="phone_no" value="{{$tenant->phone_no}}" class="form-control"></br>
+        <label>Unit IDr</label></br>
+        <input type="text" name="unit_id" id="unit_id" value="{{$tenant->unit_id}}" class="form-control"></br>
 
         <input type="submit" value="Update" class="btn btn-success"></br>
     </form>

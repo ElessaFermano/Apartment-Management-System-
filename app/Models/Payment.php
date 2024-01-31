@@ -13,7 +13,8 @@ class Payment extends Model
         'amount', 
         'date_payment', 
         'method',
-        'received'
+        'received',
+        'tenant_id'
 
     ];
 
