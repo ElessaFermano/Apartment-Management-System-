@@ -6,29 +6,29 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-// class AdminSeeder extends Seeder
-// {
-//     public function run(): void
-//     {
-//         DB::table('users')->insert([
-//             [
-//                 'name' => 'Elessa Fermano',
-//                 'email' => 'elessafermano@gmail.com',
-//                 'password' => Hash::make('fermano2024'),
-//                 'remember_token' => null,
-//                 'role' => 'admin', 
-//                 'created_at' => now(),
-//                 'updated_at' => now(),
-//             ],
-//             [
-//                 'name' => 'Rosemarie Faller',
-//                 'email' => 'rosemariefaller@gmail.com',
-//                 'password' => Hash::make('faller2024'),
-//                 'remember_token' => null,
-//                 'role' => 'admin', 
-//                 'created_at' => now(),
-//                 'updated_at' => now(),
-//             ],
-//         ]);
-//     }
-// }
+class AdminSeeder extends Seeder
+{
+    public function run(): void
+    {
+        DB::table('users')->insert([
+            [
+                'role'=> 'admin',
+                'name' => 'Elessa Fermano',
+                'email' => 'fermanoe@gmail.com',
+                'password' => Hash::make('elessa2024'),
+                'remember_token' => null, 
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'role'=> 'admin',
+                'name' => 'Rosemarie Faller',
+                'email' => 'rosiefaller@gmail.com',
+                'password' => Hash::make('faller2024'),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}

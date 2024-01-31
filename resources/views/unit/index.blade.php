@@ -2,7 +2,7 @@
 @section('content')
 <div class="card-header">
     <center><h1>List of Units</h1></center>
-
+    <link rel="stylesheet" href="dashboard/css.unit.css">
 </div>
 <div class="card-body">
     <a href="{{ url('/home') }}" class="btn btn-danger btn-sm" title="Back">
@@ -53,36 +53,15 @@
 </div>
 
 
-
-<style>
-    .unit-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .unit-column {
-        flex: 0 0 45%;
-    }
-
-    .unit {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        text-align: center;
-    }
-</style>
-
 <script>
-    // Get all check-in buttons
+   
     const checkInButtons = document.querySelectorAll('.check-in-btn');
 
-    // Add click event listener to each button
     checkInButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Change button text to "Occupied" upon clicking
+            
             button.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Occupied';
-            // You can also add logic here to send an AJAX request to mark the unit as occupied on the server-side
+            
         });
     });
 </script>
