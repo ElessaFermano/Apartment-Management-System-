@@ -9,10 +9,8 @@ body{
   font-size: 50px;
   padding: 50px;
   padding-top: 50px;
-  color: #20ad6b;
+  color: #209934;
   text-align: left;
-  
-  
   
 }
 
@@ -32,7 +30,7 @@ body{
  
 }
 .button:hover {
-  background-color: #225542; /* Green */
+  background-color: rgb(160, 194, 67); 
   color: white;
 }
 
@@ -65,7 +63,7 @@ li a:hover {
   background-color: #111;
 }
 .h:hover {
-  color: rgb(16, 86, 44); 
+  color: rgb(57, 193, 44); 
   transition: color 0.3s ease;
   
 }

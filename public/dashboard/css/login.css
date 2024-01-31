@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(to left, teal, rgb(95, 212, 228));
+  background-image: linear-gradient(to left, rgb(134, 236, 236), rgb(153, 174, 177));
 }
 
 ::selection {

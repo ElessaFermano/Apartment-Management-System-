@@ -8,7 +8,7 @@
 
 
 body{
-  background-image: linear-gradient(to right, teal, rgb(95, 212, 228));
+  background-image: linear-gradient(to right, rgb(125, 245, 245), rgb(155, 162, 163));
 }
 ::selection{
   background: rgba(26,188,156,0.3);

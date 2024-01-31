@@ -4,11 +4,7 @@
     <center><h1>List of Units</h1></center>
     <link rel="stylesheet" href="dashboard/css.unit.css">
 </div>
-<div class="card-body">
-    <a href="{{ url('/home') }}" class="btn btn-danger btn-sm" title="Back">
-        <i class="fa fa-plus" aria-hidden="true"></i> Back
-    </a>
-</div>
+
 <div class="unit-container">
     <div class="unit-column">
         <div class="unit">
@@ -27,6 +23,11 @@
             <button class="btn btn-success btn-sm check-in-btn" title="Check In">
                 <i class="fa fa-plus" aria-hidden="true"></i> Check In
             </button>
+        </div>
+        <div class="card-body">
+            <a href="{{ url('/home') }}" class="btn btn-danger btn-sm" title="Back">
+                <i class="fa fa-plus" aria-hidden="true"></i> Back
+            </a>
         </div>
    </div>
 
@@ -50,20 +51,27 @@
             </div>
 
     </div>
+    
 </div>
 
+<style>
+    .unit-container {
+    display: flex;
+    justify-content: space-around;
+}
 
-<script>
-   
-    const checkInButtons = document.querySelectorAll('.check-in-btn');
+.unit-column {
+    flex: 0 0 45%;
+}
 
-    checkInButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            
-            button.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Occupied';
-            
-        });
-    });
-</script>
+.unit {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+</style>
+
 
 @endsection
