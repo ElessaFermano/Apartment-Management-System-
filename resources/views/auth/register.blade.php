@@ -23,7 +23,7 @@
                     <div class="col-md-6">
                         <select id="role" class="form-control" name="role" required autofocus>
                            
-                            <option value="tenant" selected{{ old('role') == 'tenant' ? ' selected' : '' }}>Tenant</option>
+                            <option value="tenant" selected{{ old('role') == 'tenant' ? ' selected' : '' }}>Other Users</option>
                         </select>
                     </div>
                 </div>

@@ -46,7 +46,7 @@
                 <br>
                 <p style="padding-left: 17vh;">
                     
-                    <button class="btn btn-lightblue" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
                     
                     <a href="{{ route('role.edit', Auth::user()->id) }}" class="btn btn-outline-dark">
                         

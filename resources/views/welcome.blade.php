@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +10,18 @@
 </head>
 <body>
     <header class="masthead">
-        <div class="text-center">
+       
+        <div class="text">
            <center> 
-            <h1 class="h">Apartment Management <br>System</h1>
+            <h1 class="h">Apartment Management System</h1>
            
             <a class="button" href="{{ route('login') }}">Log In</a>
             <a class="button" href="{{ route('register') }}">Sign Up</a>
+
+            
         </center> 
         </div>
+        @include('integration')
     </header>
 </body>
 </html>

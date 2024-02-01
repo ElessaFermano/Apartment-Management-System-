@@ -9,7 +9,7 @@
                         <h2>Payment</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/payment/create') }}" class="btn btn-success btn-sm" title="Add New payment">
+                        <a href="{{ url('/payment/create') }}" class="btn btn-primary btn-sm" title="Add New payment">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
                         <br/>
